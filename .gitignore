@@ -1,4 +1,25 @@
 
+# Compiled source #
+
+###################
+
+*.com
+
+*.class
+
+*.dll
+
+*.exe
+
+*.o
+
+*.class
+
+*.dex
+
+*.ap_
+
+*.classpath
 # Compile work directory #
 
 ##########################
