@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.junova.ms">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".base.BaseActivity" />
+        <activity android:name=".check.missiontable.MissionTableActivity" />
+        <activity
+            android:name=".check.missiondetail.MissionDetailListActivity"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".zxing.activity.CaptureActivity" />
+        <activity android:name=".login.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".maintain.maintaintable.MaintainActivity" />
+        <activity android:name=".statistics.StatisticsActivity" />
+        <activity android:name=".statistics.ErrorActivity" />
+
+        <service android:name=".service.UploadService">
+            <intent-filter>
+                <action android:name="com.junova.ms.service.UploadService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".receiver.PortalReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.junova.ms.PortalReceiver" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.NetStatusReceiver"
+            android:enabled="true">
+               
+            <intent-filter>  
+                 
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <category android:name="android.intent.category.DEFAULT" />  
+
+                            
+            </intent-filter>
+              
+        </receiver>
+
+        <activity android:name=".usercenter.UserCenterActivity" />
+        <activity android:name=".usercenter.ChangePasswordActivity" />
+        <activity android:name=".maintain.maintaindetail.MaintainDetailActivity" />
+        <activity android:name=".check.missiontable.GetMissionActivity" />
+        <activity android:name=".check.missiondetail.ImageActivity" />
+        <activity android:name=".check.sportcheck.SportCheckActivity" />
+        <activity android:name=".check.sportcheck.RandomCheckActivity" />
+        <activity android:name=".article.ArticleActivity" />
+        <activity android:name=".article.ArticleDetailActivity" />
+        <activity android:name=".statistics.ErrorStatisticsActivity"></activity>
+    </application>
+
+</manifest>

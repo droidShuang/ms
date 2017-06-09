@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="sqlbrite-1.1.1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/b98b1f8bc8728b7620e8f84e8874309356f94921/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/b98b1f8bc8728b7620e8f84e8874309356f94921/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.sqlbrite/sqlbrite/1.1.1/1ad1738a2512f4c8a1720de76f85221dc37da49e/sqlbrite-1.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

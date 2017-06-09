@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_grey_300">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="24dp"
+        android:text="选择转发人"
+        android:textColor="@color/black"
+
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:text="用户"
+        android:background="@drawable/stroke_spiner"
+        android:id="@+id/pop_transpond_sp_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="24dp"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView10">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/pop_transpond_bt_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="62dp"
+        android:layout_below="@+id/pop_transpond_sp_user"
+        android:layout_alignStart="@+id/pop_transpond_sp_user" />
+
+    <Button
+        android:id="@+id/pop_transpond_bt_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pop_transpond_bt_cancel"
+        android:layout_alignBottom="@+id/pop_transpond_bt_cancel"
+        android:layout_marginStart="50dp"
+        android:layout_toEndOf="@+id/pop_transpond_bt_cancel"
+        android:text="确认" />
+</RelativeLayout>

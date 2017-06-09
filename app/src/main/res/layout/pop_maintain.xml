@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_300"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/pop_maintain_et_describle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/pop_maintain_bt_takephoto"
+        android:layout_alignStart="@+id/pop_error_tx"
+        android:layout_below="@+id/pop_error_tx"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_toStartOf="@+id/pop_maintain_iv_photo"
+        android:background="@drawable/rectangle_et_check"
+        android:gravity="start"
+        android:inputType="textNoSuggestions|textMultiLine" />
+
+    <TextView
+        android:id="@+id/pop_error_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/pop_maintain_iv_photo"
+        android:layout_marginStart="24dp"
+        android:gravity="center_vertical"
+        android:minHeight="30dp"
+        android:minWidth="200dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:text="解决" />
+
+    <ImageView
+        android:id="@+id/pop_maintain_iv_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="57dp"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/storke_imageview"
+        android:minHeight="200dp"
+        android:minWidth="200dp" />
+
+    <Button
+        android:id="@+id/pop_maintain_bt_deletephoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pop_maintain_bt_takephoto"
+        android:layout_alignBottom="@+id/pop_maintain_bt_takephoto"
+        android:layout_alignEnd="@+id/pop_maintain_iv_photo"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/pop_maintain_bt_takephoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/pop_maintain_iv_photo"
+        android:layout_marginTop="22dp"
+        android:layout_toEndOf="@+id/pop_maintain_et_describle"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/pop_maintain_bt_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/pop_maintain_et_describle"
+        android:layout_below="@+id/pop_maintain_et_describle"
+        android:layout_marginEnd="58dp"
+        android:layout_marginTop="27dp"
+        android:text="保存" />
+
+    <Button
+        android:id="@+id/pop_maintain_bt_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pop_maintain_bt_save"
+        android:layout_alignBottom="@+id/pop_maintain_bt_save"
+        android:layout_toEndOf="@+id/pop_maintain_bt_save"
+        android:text="提交" />
+</RelativeLayout>

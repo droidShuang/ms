@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="今日任务" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/main_iv_logo1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="18dp"
+            android:background="@mipmap/ic_logo1" />
+
+        <ImageView
+            android:id="@+id/main_iv_line"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/main_iv_logo1"
+            android:layout_toEndOf="@+id/main_iv_logo1"
+            android:background="@mipmap/ic_line" />
+
+        <ImageView
+            android:id="@+id/main_iv_user"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/main_iv_logo2"
+            android:layout_marginEnd="16dp"
+            android:background="@mipmap/ic_user" />
+
+        <TextView
+            android:paddingTop="5dp"
+            android:id="@+id/main_tx_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/main_iv_user"
+            android:layout_marginEnd="27dp"
+            android:layout_toStartOf="@+id/main_iv_user"
+            android:text="12月16日" />
+
+        <TextView
+            android:paddingTop="5dp"
+            android:layout_marginEnd="27dp"
+            android:layout_toStartOf="@+id/main_iv_user"
+            android:id="@+id/main_tx_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="星期五"
+            android:layout_below="@+id/main_tx_date" />
+
+        <ImageView
+            android:id="@+id/main_iv_logo2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@mipmap/ic_logo2"
+            android:layout_alignTop="@+id/main_iv_line"
+            android:layout_toEndOf="@+id/main_iv_line" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container_artical"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/header"
+        android:layout_alignParentStart="true">
+
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>

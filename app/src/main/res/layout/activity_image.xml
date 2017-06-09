@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.junova.ms.check.missiondetail.ImageActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/image_vp_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+    <RadioGroup
+        android:id="@+id/image_rg_dot"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+
+        android:gravity="center"
+        android:orientation="horizontal"></RadioGroup>
+
+    <TextView
+        android:id="@+id/image_tx_operation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="xxxxx"
+        android:textSize="20sp" />
+</FrameLayout>

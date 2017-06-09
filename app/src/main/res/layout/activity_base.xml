@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.junova.ms.base.BaseActivity">
+
+    <com.junova.ms.widgt.TitleBar
+        android:id="@+id/base_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/red"
+        android:visibility="gone"></com.junova.ms.widgt.TitleBar>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/base_toolbar"
+        style="@style/MyToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:title="toolbar"
+
+
+        app:titleTextAppearance="@style/ToolbarTextAppearance.Title"></android.support.v7.widget.Toolbar>
+</LinearLayout>

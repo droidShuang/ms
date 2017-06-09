@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/item_mission"
+    style="@style/MyCardViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/item_mission_tx_name"
+
+            android:background="@color/change_psd_line"
+            android:id="@+id/view2" />
+
+        <TextView
+            android:id="@+id/item_mission_tx_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/item_mission_tx_name"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp"
+
+
+            android:text="日期"
+            android:textColor="@color/md_red_500"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/item_mission_tx_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/item_mission_tx_number"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="24dp"
+            android:text="QCOSE任务管理"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/item_mission_tx_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="24dp"
+            android:text="任务状态"
+            android:textSize="20sp"
+            android:layout_above="@+id/view2"
+            android:layout_toStartOf="@+id/item_iv_isup" />
+
+        <TextView
+            android:id="@+id/item_mission_tx_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="24dp"
+            android:text="1."
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/item_mission_tx_isup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item_mission_tx_date"
+            android:layout_below="@+id/item_mission_tx_number"
+            android:layout_toStartOf="@+id/item_mission_tx_date"
+            android:paddingTop="10dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/item_iv_isup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/item_mission_tx_state"
+            android:layout_marginTop="15dp"
+            android:background="@mipmap/check" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+
+

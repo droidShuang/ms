@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MyCardViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:clickable="true"
+   >
+
+    <RelativeLayout
+        android:padding="5dp"
+        android:background="@drawable/item_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/item_maintain_tx_uper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/maintain_item_bt_detail"
+            android:layout_marginLeft="5dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:text="uper"
+            android:textColor="@color/accident_red"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/item_maintain_tx_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/maintain_item_bt_detail"
+            android:layout_toLeftOf="@+id/item_maintain_tx_uper"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:text="date"
+            android:textColor="@color/accident_red"
+            android:textSize="18sp" />
+
+
+        <Button
+            android:id="@+id/maintain_item_bt_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:theme="@style/MyCardViewStyle"
+            android:layout_alignParentTop="true"
+            android:text="详 情" />
+
+        <TextView
+            android:id="@+id/item_maintain_tx_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="24dp"
+            android:text="xxxxxxxxx"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/maintain_item_bt_detail" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

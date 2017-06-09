@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        icon="@mipmap/ic_check"
+        id="@+id/tab_check"
+        title="任务点检" />
+    <tab
+        icon="@mipmap/ic_contain"
+        id="@+id/tab_contain"
+        title="任务维修" />
+    <tab
+        icon="@mipmap/ic_home"
+        id="@+id/tab_home"
+        title="" />
+    <tab
+        icon="@mipmap/ic_artical"
+        id="@+id/tab_artical"
+        title="文章日志" />
+    <tab
+        icon="@mipmap/ic_count"
+        id="@+id/tab_count"
+        title="查询统计" />
+</tabs>

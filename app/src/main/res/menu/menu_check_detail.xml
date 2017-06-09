@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_verify"
+
+        android:orderInCategory="80"
+        android:title="验证"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_up"
+
+        android:orderInCategory="80"
+        android:title="上传任务"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

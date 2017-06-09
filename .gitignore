@@ -1,0 +1,22 @@
+
+# Compile work directory #
+
+##########################
+
+bin/
+
+gen/
+
+obj/
+
+tmp/
+
+out/
+
+proguard/
+
+proguard_logs/
+
+build/
+
+target/
