@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="activity_main_top_iv_height">200dp</dimen>
-    <dimen name="main_text_size">25px</dimen>
-</resources>

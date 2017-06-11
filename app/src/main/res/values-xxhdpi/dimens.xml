@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="activity_login_et_width">300dp</dimen>
-    <dimen name="activity_login_et_height">40dp</dimen>
-    <dimen name="activity_login_iv_width">90dp</dimen>
-    <dimen name="activity_login_iv_height">90dp</dimen>
-    <dimen name="activity_main_top_iv_height">120dp</dimen>
-    <dimen name="main_text_size">30px</dimen>
-</resources>

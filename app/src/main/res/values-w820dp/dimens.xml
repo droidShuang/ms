@@ -4,5 +4,11 @@
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
     <dimen name="activity_horizontal_margin">64dp</dimen>
     <dimen name="activity_main_top_iv_height">120dp</dimen>
-    <dimen name="main_text_size">25px</dimen>
+    <dimen name="main_text_size">40sp</dimen>
+    <dimen name="main_artical_height">336dp</dimen>
+    <dimen name="main_artical_width">240dp</dimen>
+    <dimen name="view_margin">1dp</dimen>
+    <dimen name="home_article_title_txsize">15sp</dimen>
+    <dimen name="home_article_summary_txsize">14sp</dimen>
+    <dimen name="home_article_date_txsize">12sp</dimen>
 </resources>

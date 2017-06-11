@@ -129,55 +129,55 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.vi
         ButterKnife.bind(this);
         loginPresenter = new LoginPresenterImpl(this);
         spFactory.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String ip = "";
-                switch (position) {
-                    // 安亭底盘厂
-                    case 0:
-                        ip = "10.1.10.130:80";
-                        break;
-                    //烟台厂
-                    case 1:
-                        ip = "10.188.186.225:7001";
+                                                @Override
+                                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                                    String ip = "";
+                                                    switch (position) {
+                                                        // 安亭底盘厂
+                                                        case 0:
+                                                            ip = "10.1.10.52:8080";
+                                                            break;
+                                                        //烟台厂
+                                                        case 1:
+                                                            ip = "10.188.186.225:7001";
 
-                        break;
-                    //安亭北厂
-                    case 2:
-                        ip = "10.188.186.226:7001";
+                                                            break;
+                                                        //安亭北厂
+                                                        case 2:
+                                                            ip = "10.188.186.226:7001";
 
-                        break;
-                    //轿车车桥厂
-                    case 3:
-                        ip = "10.188.186.222:7001";
+                                                            break;
+                                                        //轿车车桥厂
+                                                        case 3:
+                                                            ip = "10.188.186.222:7001";
 
-                        break;
-                    //汽车底盘厂
-                    case 4:
-                        ip = "10.188.186.224:7001";
+                                                            break;
+                                                        //汽车底盘厂
+                                                        case 4:
+                                                            ip = "10.188.186.224:7001";
 
-                        break;
-                    //安保部
-                    case 5:
-                        ip = "10.188.186.222:7001";
-                        break;
+                                                            break;
+                                                        //安保部
+                                                        case 5:
+                                                            ip = "10.188.186.222:7001";
+                                                            break;
 
 
-                    default:
-                        break;
-                }
-                if (!TextUtils.isEmpty(ip)) {
-                    IpConfigUtil.updataIp(ip);
-                    PrefUtils.putString(LoginActivity.this, "currentIp", ip);
+                                                        default:
+                                                            break;
+                                                    }
+                                                    if (!TextUtils.isEmpty(ip)) {
+                                                        IpConfigUtil.updataIp(ip);
+                                                        PrefUtils.putString(LoginActivity.this, "currentIp", ip);
 
-                }
-            }
+                                                    }
+                                                }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+                                                @Override
+                                                public void onNothingSelected(AdapterView<?> parent) {
 
-            }
-        }
+                                                }
+                                            }
         );
     }
 

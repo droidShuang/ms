@@ -14,21 +14,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_above="@+id/linearLayout6"
+        android:layout_alignStart="@+id/relativeLayout">
 
-        <TextView
-            android:id="@+id/main_tx_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="日期"
-            android:textSize="25sp" />
-
-        <TextView
-            android:id="@+id/main_tx_weather"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="25sp" />
     </LinearLayout>
 
 
@@ -44,26 +33,25 @@
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/activity_main_top_iv_height"
-        android:layout_marginLeft="-20dp"
-        android:layout_marginRight="-20dp"
-        android:background="@drawable/main_top1"
-        android:layout_above="@+id/main_iv_logo2" />
+        android:layout_height="48dp"
+        android:background="@mipmap/home_title_bg"
+        android:layout_below="@+id/cardView"
+        android:layout_alignParentEnd="true" />
 
     <LinearLayout
 
         android:id="@+id/layout_user"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/main_iv_logo2"
         android:layout_alignParentStart="true"
 
         android:layout_below="@+id/main_iv_logo"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="19dp"
         android:clickable="true"
         android:orientation="vertical"
         android:paddingLeft="15dp"
-        android:paddingTop="15dp">
+        android:paddingTop="15dp"
+        android:layout_alignEnd="@+id/main_iv_logo2">
 
         <LinearLayout
             android:id="@+id/layout_user_name"
@@ -144,21 +132,23 @@
 
     <android.support.v7.widget.CardView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/cardView">
 
     </android.support.v7.widget.CardView>
 
     <RelativeLayout
         android:id="@+id/linearLayout6"
-        android:layout_width="wrap_content"
-        android:layout_height="450dp"
+
+        android:layout_width="@dimen/main_artical_width"
+        android:layout_height="@dimen/main_artical_height"
         android:layout_above="@+id/linearLayout5"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/layout_user"
-        android:background="@drawable/wenzhangzhongxin_09">
+        android:layout_below="@+id/imageView5"
+        android:layout_marginBottom="82dp"
+        android:layout_marginTop="17dp"
+        android:background="@mipmap/home_act_bg"
+        >
 
         <ImageView
             android:id="@+id/main_bt_more"
@@ -166,63 +156,68 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="21dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/wenzhangxiangqing_03"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="10dp" />
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="14dp"
+            android:background="@mipmap/home_act_yuandian"
+
+
+           />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/main_rv_article"
-
+            android:layout_marginTop="14dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
             android:layout_below="@+id/main_bt_more"
-            android:layout_marginTop="20dp"></android.support.v7.widget.RecyclerView>
+
+            android:layout_alignParentStart="true"></android.support.v7.widget.RecyclerView>
 
     </RelativeLayout>
 
     <LinearLayout
 
         android:id="@+id/linearLayout5"
-        android:layout_width="wrap_content"
-        android:layout_height="215dp"
+        android:layout_width="145.5dp"
+        android:layout_height="120dp"
+
+        android:background="@mipmap/home_btn_bg"
+        android:orientation="vertical"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/linearLayout6"
-        android:background="@drawable/main_bottom1"
-        android:orientation="vertical">
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/linearLayout6">
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/main_tx_checknum"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="180dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/main_tx_count"
-                android:gravity="center"
-                android:text="0"
-                android:textColor="@color/white" />
-
-            <TextView
                 android:id="@+id/main_bt_check"
-                android:layout_width="200dp"
-                android:layout_height="70dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/main_menu_height"
                 android:background="@drawable/main_bt_selector"
                 android:gravity="center"
                 android:onClick="onClick"
                 android:text="任务点检"
                 android:textColor="@color/white"
-                android:textSize="25sp" />
+                android:textSize="@dimen/main_menu_txsize"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:padding="2dp"
+                android:id="@+id/main_tx_checknum"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="180dp"
+                android:layout_marginEnd="2dp"
+                android:background="@mipmap/home_xiaoxi"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
         </RelativeLayout>
 
         <View
@@ -236,8 +231,8 @@
 
             <TextView
                 android:id="@+id/main_bt_maintain"
-                android:layout_width="200dp"
-                android:layout_height="70dp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/main_menu_height"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentStart="true"
                 android:background="@drawable/main_bt_selector"
@@ -245,18 +240,21 @@
                 android:onClick="onClick"
                 android:text="任务维修"
                 android:textColor="@color/white"
-                android:textSize="25sp" />
+                android:textSize="@dimen/main_menu_txsize" />
 
             <TextView
+                android:padding="2dp"
                 android:id="@+id/main_tx_maintainnum"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_marginLeft="180dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/main_tx_count"
+                android:layout_marginEnd="2dp"
+                android:background="@mipmap/home_xiaoxi"
                 android:gravity="center"
                 android:text="0"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
         </RelativeLayout>
 
         <View
@@ -270,8 +268,8 @@
 
             <TextView
                 android:id="@+id/main_bt_statistics"
-                android:layout_width="190dp"
-                android:layout_height="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/main_menu_height"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
@@ -280,7 +278,7 @@
                 android:onClick="onClick"
                 android:text="查询统计"
                 android:textColor="@color/white"
-                android:textSize="25sp" />
+                android:textSize="@dimen/main_menu_txsize" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -290,7 +288,8 @@
         android:layout_alignBottom="@+id/imageView5"
         android:layout_alignParentRight="true"
 
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:id="@+id/relativeLayout">
 
         <TextView
 
@@ -303,7 +302,7 @@
             android:textColor="@color/md_white_1000" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/main_tx_week"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/main_tx_date1"
@@ -322,21 +321,22 @@
 
     <ImageView
         android:id="@+id/main_iv_logo2"
-        android:layout_width="@dimen/activity_login_iv_width"
-        android:layout_height="@dimen/activity_login_iv_height"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:src="@mipmap/defoult_lvse_logo"
         android:layout_above="@+id/layout_user"
-        android:layout_marginStart="26dp"
         android:layout_toEndOf="@+id/main_iv_logo"
-        android:src="@drawable/logo2" />
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="9dp" />
 
     <ImageView
 
         android:id="@+id/main_iv_logo"
-        android:layout_width="@dimen/activity_login_iv_width"
-        android:layout_height="@dimen/activity_login_iv_height"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="72dp"
-        android:src="@drawable/logo" />
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="16dp"
+        android:src="@mipmap/defoult_dazhong_logo"
+        android:layout_below="@+id/imageView5"
+        android:layout_toEndOf="@+id/cardView" />
+
 </RelativeLayout>

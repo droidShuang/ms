@@ -142,3 +142,7 @@ Icon?
 ehthumbs.db
 
 Thumbs.db
+src/main/res/assets/
+src/main/res/layout-800x1280/
+src/main/res/layout-w800dp-h1280dp/
+src/main/res/layout-xlarge/
