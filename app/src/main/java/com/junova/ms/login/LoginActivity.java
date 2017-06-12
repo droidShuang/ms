@@ -140,7 +140,6 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.vi
                                                         //烟台厂
                                                         case 1:
                                                             ip = "10.188.186.225:7001";
-
                                                             break;
                                                         //安亭北厂
                                                         case 2:

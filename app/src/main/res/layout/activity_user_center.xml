@@ -43,10 +43,10 @@
         android:id="@+id/user_center_tx_chaneg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.02"
-        android:drawablePadding="300dp"
+
+
         android:drawableRight="@mipmap/ic_arrow_left"
-        android:gravity="center"
+
         android:padding="10dp"
         android:text="修改密码"
 
@@ -61,11 +61,11 @@
         android:id="@+id/user_center_tx_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.02"
+
         android:padding="10dp"
-        android:drawablePadding="300dp"
+
         android:drawableRight="@mipmap/ic_arrow_left"
-        android:gravity="center"
+
         android:text="退出登录"
 
         android:textSize="24sp" />
