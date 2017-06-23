@@ -53,8 +53,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.vi
     EditText edtUseId;
     @Bind(R.id.login_edt_psw)
     EditText edtPsw;
-    @Bind(R.id.login_sp_factory)
-    TextView spFacory;
+
     @Bind(R.id.login_sp_choose)
     Spinner spFactory;
     private String factoryId = "sss";
@@ -135,7 +134,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.vi
                                                     switch (position) {
                                                         // 安亭底盘厂
                                                         case 0:
-                                                            ip = "10.1.10.52:8080";
+                                                            ip = "10.188.186.221:7001";
                                                             break;
                                                         //烟台厂
                                                         case 1:
@@ -190,60 +189,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.vi
         }
     }
 
-    @OnClick(R.id.login_sp_factory)
-    public void onSpinnerClicked(TextView tx) {
-        loginPresenter.getFactory(tx);
-    }
 
-
-//    @OnClick(R.id.login_bt_choseip)
-//    void chooseIp() {
-//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//        View dialogView = View.inflate(this, R.layout.dialog_ip, null);
-//        final RadioGroup rgIp = (RadioGroup) dialogView.findViewById(R.id.rg_ip);
-//        final EditText etIp = (EditText) dialogView.findViewById(R.id.et_ip);
-//        builder.setView(dialogView);
-//        builder.setTitle("选择IP");
-//        builder.setPositiveButton("保存", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                String ip = "";
-//                String strIp = etIp.getText().toString().trim();
-//                //10.124.87.208 安亭//10.124.87.188金桥
-//
-//                if (!strIp.isEmpty()) {
-//                    Logger.d("text" + strIp);
-//                    ip = strIp;
-//                } else {
-//                    switch (rgIp.getCheckedRadioButtonId()) {
-//                        case R.id.rb_anting:
-//                            ip = "10.124.87.188:7001";
-//                            break;
-//                        case R.id.rb_jinqiao:
-//                            ip = "10.124.87.188:7001";
-//                            break;
-//                        case R.id.rb_junova:
-//                            ip = "10.188.186.214:7001";
-//                            break;
-//                    }
-//                }
-//                AppConfig.IP = ip;
-//                String port[] = ip.split(":");
-//                AppConfig.host = " http://" + ip + "/cms/app/";//"http://" + ip + "/SEWS/api/";//http://10.188.184.188:7001/SEWS/api/ http://10.188.184.191:80/SEWS/api/
-//                AppConfig.IMAGEPATH = "http://" + port[0] + "/cms/uploadFiles/uploadImgs/";
-//                updataCongig(AppConfig.host);
-//                Toast.makeText(LoginActivity.this, "IP:" + AppConfig.IP + "设置成功", Toast.LENGTH_SHORT).show();
-//                dialog.cancel();
-//            }
-//        });
-//        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                dialog.cancel();
-//            }
-//        });
-//        builder.create().show();
-//    }
 
     @Override
     public void toHome() {

@@ -2,6 +2,7 @@ package com.junova.ms.adapter;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -31,7 +32,8 @@ public class ErrorAdapter extends RecyclerView.Adapter<ErrorAdapter.ErrorHolder>
 
     @Override
     public ErrorHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ErrorHolder(View.inflate(parent.getContext(), R.layout.item_error, null));
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_error, parent, false);
+        return new ErrorHolder(view);
     }
 
     @Override

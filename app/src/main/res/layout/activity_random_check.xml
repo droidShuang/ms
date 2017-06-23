@@ -36,7 +36,6 @@
             android:paddingLeft="17dp"
             android:paddingRight="17dp"
             android:paddingTop="25dp"
-
             android:textColor="@color/black"
 
             android:textSize="18sp" />
@@ -50,8 +49,11 @@
                 android:id="@+id/random_edt_describetion"
                 android:layout_width="272dp"
                 android:layout_height="207dp"
+                android:layout_above="@+id/random_bt_add"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
+                android:layout_marginRight="10dp"
+                android:layout_toStartOf="@+id/random_rv_image"
                 android:background="@drawable/edittext_rectangle"
                 android:gravity="start"
                 android:inputType="textMultiLine"
@@ -94,7 +96,7 @@
         android:id="@+id/random_sp_factory"
         android:layout_width="272dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/stroke_spiner"
         android:text="工厂"></TextView>
 
@@ -102,7 +104,7 @@
         android:id="@+id/random_sp_shop"
         android:layout_width="272dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/stroke_spiner"
         android:text="车间"></TextView>
 
@@ -110,7 +112,7 @@
         android:id="@+id/random_sp_section"
         android:layout_width="272dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/stroke_spiner"
         android:text="工段"></TextView>
 
@@ -118,7 +120,7 @@
         android:id="@+id/random_sp_class"
         android:layout_width="272dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/stroke_spiner"
         android:text="班组"></TextView>
 
@@ -126,7 +128,7 @@
         android:id="@+id/random_sp_user"
         android:layout_width="272dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/stroke_spiner"
         android:text="负责人"></TextView>
 

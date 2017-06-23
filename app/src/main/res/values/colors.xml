@@ -396,4 +396,7 @@
     <color name="ms_primary_text">#212121</color>
     <color name="ms_secondary_text">#757575</color>
     <color name="ms_divider">#BDBDBD</color>
+
+    <color name="bt_login_normal">#009fab</color>
+    <color name="bt_login_pressed">#008891</color>
 </resources>

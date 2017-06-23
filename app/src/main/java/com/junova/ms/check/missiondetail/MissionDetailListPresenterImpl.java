@@ -1,14 +1,11 @@
 package com.junova.ms.check.missiondetail;
 
 import android.content.Context;
-import android.os.Looper;
 import android.util.Base64;
-import android.view.View;
 
 
 import com.alibaba.fastjson.JSON;
 import com.junova.ms.api.MsApi;
-import com.junova.ms.app.AppConfig;
 import com.junova.ms.bean.Error;
 import com.junova.ms.bean.MissionDetail;
 import com.junova.ms.bean.Record;
@@ -32,7 +29,6 @@ import io.reactivex.Flowable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
@@ -124,7 +120,7 @@ public class MissionDetailListPresenterImpl implements MissionDetailContract.pre
                 List<RecordModel> recordModelList = new ArrayList<RecordModel>();
                 for (int i = 0; i < recordList.size(); i++) {
                     RecordModel recordModel = new RecordModel();
-                    recordModel.setCheckTime(recordList.get(i).getTime());
+                    recordModel.setCheckTime(recordList.get(i).getCheckTime());
                     recordModel.setErrorDes(recordList.get(i).getErrorDes());
                     recordModel.setErrorImage("");
 

@@ -8,7 +8,7 @@ import android.content.SharedPreferences;
  */
 public class AppConfig {
     //url 10.188.186.221:7001         http://10.1.10.107:8080 10.124.87.212:7001/cms
-    public static String IP = "10.1.10.52:8080";//http://rap.taobao.org/mockjsdata/15302/          http://10.1.10.61:80/cms/app/   http://10.1.10.95:8080/cms/app/
+    public static String IP = "10.188.186.221:7001";//http://rap.taobao.org/mockjsdata/15302/          http://10.1.10.61:80/cms/app/   http://10.1.10.95:8080/cms/app/
 
     public static String host = "http://" + IP + "/cms/app/";   //http://10.188.186.214:7001/cms/   10.188.186.221:7001
     public static String IMAGEPATH = "http://" + IP + "/cms/uploadFiles/uploadImgs/";//10.188.184.188:80

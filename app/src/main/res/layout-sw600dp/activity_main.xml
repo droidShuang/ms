@@ -21,7 +21,6 @@
 
     </LinearLayout>
 
-
     <!--<View-->
     <!--android:id="@+id/main_bt_maintain"-->
     <!--android:layout_width="200dp"-->
@@ -36,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@mipmap/home_title_bg"
-        android:layout_below="@+id/cardView"
+
         android:layout_alignParentEnd="true" />
 
     <LinearLayout
@@ -333,6 +332,6 @@
         android:layout_marginStart="16dp"
         android:src="@mipmap/defoult_dazhong_logo"
         android:layout_below="@+id/imageView5"
-        android:layout_toEndOf="@+id/cardView" />
+     />
 
 </RelativeLayout>

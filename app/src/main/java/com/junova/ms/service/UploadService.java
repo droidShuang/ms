@@ -9,7 +9,6 @@ import android.util.Base64;
 
 import com.alibaba.fastjson.JSON;
 import com.junova.ms.api.MsApi;
-import com.junova.ms.app.App;
 
 import com.junova.ms.bean.Record;
 import com.junova.ms.database.MsDbManger;
@@ -60,7 +59,7 @@ public class UploadService extends Service {
                     List<RecordModel> recordModelList = new ArrayList<RecordModel>();
                     for (int i = 0; i < recordList.size(); i++) {
                         RecordModel recordModel = new RecordModel();
-                        recordModel.setCheckTime(recordList.get(i).getTime());
+                        recordModel.setCheckTime(recordList.get(i).getCheckTime());
                         recordModel.setErrorDes(recordList.get(i).getErrorDes());
                         recordModel.setErrorImage("");
                         recordModel.setMissionItemId(recordList.get(i).getMissionItemId());

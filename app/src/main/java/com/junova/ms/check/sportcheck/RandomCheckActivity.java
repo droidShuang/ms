@@ -403,6 +403,10 @@ public class RandomCheckActivity extends BaseActivity implements RandomCheckCont
 
     @Override
     public void showPart(List<Part> partList, final TextView tx) {
+        if (partList.isEmpty()) {
+            Toasty.info(RandomCheckActivity.this, "数据为空").show();
+            return;
+        }
         final PartPopWindow partPopWindow = new PartPopWindow(RandomCheckActivity.this, partList);
         partPopWindow.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
         partPopWindow.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -445,6 +449,10 @@ public class RandomCheckActivity extends BaseActivity implements RandomCheckCont
 
     @Override
     public void showUser(List<User> userList, final TextView tx) {
+        if (userList.isEmpty()) {
+            Toasty.info(RandomCheckActivity.this, "数据为空").show();
+            return;
+        }
         final UserPopWindow userPopWindow = new UserPopWindow(RandomCheckActivity.this, userList);
         userPopWindow.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
         userPopWindow.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);

@@ -282,7 +282,7 @@ public class MaintainDetailActivity extends BaseActivity implements MaintainDeta
                     return;
                 }
                 TranspondPopWindow transpondPopWindow = new TranspondPopWindow(this, repairsMissionId, abnormalDisposeId);
-                transpondPopWindow.setWidth(LinearLayout.LayoutParams.MATCH_PARENT);
+                transpondPopWindow.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
                 transpondPopWindow.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
                 transpondPopWindow.showAsDropDown(findViewById(R.id.view));
                 transpondPopWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {

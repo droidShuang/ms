@@ -11,7 +11,7 @@ public class Record {
     private String errorDes = "";//异常描述
     private String errorImage = "";//异常图片
     private String errorId = "";//异常类型id
-    private String time = "";//检查时间
+    private String checkTime = "";//检查时间
     private String value = "";//数值
 
     private String factoryId = "";
@@ -40,20 +40,22 @@ public class Record {
 
     }
 
-    public Record(String missionItemId, String missionTableId, int status, String errorDes, String errorImage, String errorId, String time, String value, String isUp, String recordId) {
+    public Record(String missionItemId, String missionTableId, int status, String errorDes, String errorImage, String errorId, String checkTime, String value, String isUp, String recordId, String toUserId, String toUserName) {
         this.missionItemId = missionItemId;
         this.missionTableId = missionTableId;
         this.status = status;
         this.errorDes = errorDes;
         this.errorImage = errorImage;
         this.errorId = errorId;
-        this.time = time;
+        this.checkTime = checkTime;
         this.value = value;
         this.isUp = isUp;
         this.recordId = recordId;
+        this.toUserId = toUserId;
+        this.toUserName = toUserName;
     }
 
-    public Record(String missionItemId, String missionTableId, int status, String errorDes, String errorImage, String errorId, String time, String value, String factoryId,
+    public Record(String missionItemId, String missionTableId, int status, String errorDes, String errorImage, String errorId, String checkTime, String value, String factoryId,
                   String factoryName, String sectionId, String sectionName, String shopId, String shopName, String classId, String className, String partId, String toUserId, String toUserName, String isUp) {
         this.missionItemId = missionItemId;
         this.missionTableId = missionTableId;
@@ -61,7 +63,7 @@ public class Record {
         this.errorDes = errorDes;
         this.errorImage = errorImage;
         this.errorId = errorId;
-        this.time = time;
+        this.checkTime = checkTime;
         this.value = value;
         this.factoryId = factoryId;
         this.factoryName = factoryName;
@@ -221,12 +223,12 @@ public class Record {
         this.errorId = errorId;
     }
 
-    public String getTime() {
-        return time;
+    public String getCheckTime() {
+        return checkTime;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setCheckTime(String checkTime) {
+        this.checkTime = checkTime;
     }
 
     public String getValue() {

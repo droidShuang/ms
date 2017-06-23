@@ -175,7 +175,7 @@ public class MissionDetailAdapter extends RecyclerView.Adapter<RecyclerView.View
                             record.setStatus(currentStatus);
                             record.setMissionItemId(item.getMissionDetailId());
 
-                            record.setTime(DateUtil.getTimestamp());
+                            record.setCheckTime(DateUtil.getTimestamp());
                             record.setValue(value + "");
 
                             MsDbManger.getInstance(v.getContext()).updataRecord(item.getMissionDetailId(), record);
@@ -262,7 +262,7 @@ public class MissionDetailAdapter extends RecyclerView.Adapter<RecyclerView.View
                         if (item.getStatus() == 1) {
                             Record record = new Record();
                             record.setStatus(0);
-                            record.setTime(DateUtil.getTimestamp());
+                            record.setCheckTime(DateUtil.getTimestamp());
                             MsDbManger.getInstance(v.getContext()).updataRecord(item.getMissionDetailId(), record);
                             MsDbManger.getInstance(v.getContext()).updataMissionDetail(item.getMissionDetailId(), 0, "");
                         }

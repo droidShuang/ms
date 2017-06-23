@@ -283,7 +283,7 @@ public class MsRxDbManger {
         contentValues.put("errorDes", record.getErrorDes());
         contentValues.put("errorImage", record.getErrorImage());
         contentValues.put("errorId", record.getErrorId());
-        contentValues.put("time", record.getTime());
+        contentValues.put("time", record.getCheckTime());
         return contentValues;
     }
 
@@ -300,8 +300,11 @@ public class MsRxDbManger {
                 CursorUtil.getStringOfColumn(cursor, "errorDes"),
                 CursorUtil.getStringOfColumn(cursor, "errorImage"),
                 CursorUtil.getStringOfColumn(cursor, "errorId"),
-                CursorUtil.getStringOfColumn(cursor, "time"),"",
-                CursorUtil.getStringOfColumn(cursor,"isUp"),CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_Id));
+                CursorUtil.getStringOfColumn(cursor, "time"), "",
+                CursorUtil.getStringOfColumn(cursor, "isUp"),
+                CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_Id),
+                CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_To_User_Id),
+                CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_TO_User_Name));
     }
 
     /**

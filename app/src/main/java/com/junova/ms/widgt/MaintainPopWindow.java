@@ -214,10 +214,12 @@ public class MaintainPopWindow extends PopupWindow {
                             builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
+
                                     dialog.cancel();
+                                    MaintainPopWindow.this.dismiss();
                                 }
                             });
-                            MaintainPopWindow.this.dismiss();
+
                             builder.create().show();
 
                         } else {

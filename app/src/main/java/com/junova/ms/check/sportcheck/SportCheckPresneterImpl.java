@@ -211,7 +211,7 @@ public class SportCheckPresneterImpl implements SportCheckContract.presenter {
                                 recordList.get(i).getErrorImage().split(";")) {
                             stringBuffer.append(stringBuffer + Base64.encodeToString(ImageUtil.getSmallBitmap(path), Base64.DEFAULT) + ";");
                         }
-                        Logger.d(stringBuffer.toString());
+
                         recordList.get(i).setErrorImage(stringBuffer.toString());
                     }
                 }
@@ -229,6 +229,7 @@ public class SportCheckPresneterImpl implements SportCheckContract.presenter {
                 if (status == 1) {
 
                     MsDbManger.getInstance(context).updataRecord(missionTableId, "2");
+                    MsDbManger.getInstance(context).deleteSportRecord(missionTableId);
                     sportCheckView.hideLoadingProgressDialog();
 
                 }
@@ -245,7 +246,7 @@ public class SportCheckPresneterImpl implements SportCheckContract.presenter {
     @Override
     public void uploadRecord(final Context context) {
         sportCheckView.showLoadingProgressDialog();
-        MsDbManger.getInstance(context).getMissionRecordsByStatus(3 + "").flatMap(new Function<List<Record>, Publisher<String>>() {
+        MsDbManger.getInstance(context).getMissionRecordsByStatus(2 + "").flatMap(new Function<List<Record>, Publisher<String>>() {
 
             @Override
             public Publisher<String> apply(@NonNull List<Record> recordList) throws Exception {
@@ -273,6 +274,7 @@ public class SportCheckPresneterImpl implements SportCheckContract.presenter {
                 if (status == 1) {
 
                     MsDbManger.getInstance(context).updataRecordUploadSuccess();
+                    MsDbManger.getInstance(context).deleteAllSportRecord();
                     sportCheckView.hideLoadingProgressDialog();
                 }
             }

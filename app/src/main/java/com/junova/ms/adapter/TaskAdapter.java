@@ -271,7 +271,7 @@ public class TaskAdapter  {
 //                    recordModel.setIsUpload("false");
 //                    recordModel.setTaskTableId(taskTableId);
 //                    recordModel.setTaskItemId(list.get(position).getITEMID());
-//                    recordModel.setDate(CommonUntil.getTime());
+//                    recordModel.setDate(CommonUntil.getCheckTime());
 //                    recordModelList.set(position, recordModel);
 //                }
 //
@@ -371,7 +371,7 @@ public class TaskAdapter  {
 //                @Override
 //                public void onClick(View v) {
 //
-//                    recordModelList.get(position).setDate(CommonUntil.getTime());
+//                    recordModelList.get(position).setDate(CommonUntil.getCheckTime());
 //                    recordModelList.get(position).setDescription(etNote.getText().toString());
 //                    Logger.d("record    " + etNote.getText().toString());
 //                    recordModelList.get(position).setErrorId(((TaskItemInfoModel.ErrorKind) spinnerErroKind.getSelectedItem()).getERRORID());

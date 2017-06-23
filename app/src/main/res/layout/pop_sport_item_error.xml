@@ -3,17 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical">
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/pop_error_tx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="66dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="33dp"
         android:gravity="center_vertical"
         android:minHeight="30dp"
         android:minWidth="200dp"
@@ -21,40 +19,30 @@
 
     <ImageView
         android:id="@+id/pop_error_iv_photo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="38dp"
-        android:layout_marginTop="45dp"
-        android:background="@drawable/storke_imageview"
-        android:minHeight="200dp"
-        android:minWidth="200dp"
-         />
+        android:layout_width="@dimen/iv_width"
+        android:layout_height="@dimen/iv_height"
 
+        android:layout_alignEnd="@+id/pop_error_bt_deletephoto"
+        android:layout_alignStart="@+id/pop_error_bt_takephoto"
+        android:layout_below="@+id/pop_error_tx"
+        android:background="@drawable/storke_imageview" />
 
-    <Button
-        android:id="@+id/pop_error_bt_takephoto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_below="@+id/pop_error_iv_photo"
-        android:layout_toEndOf="@+id/pop_error_et_describle"
-        android:text="+" />
 
     <Button
         android:id="@+id/pop_error_bt_deletephoto"
-        android:layout_width="wrap_content"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/pop_error_iv_photo"
-        android:layout_below="@+id/pop_error_iv_photo"
+        android:layout_alignBaseline="@+id/pop_error_bt_takephoto"
+        android:layout_alignBottom="@+id/pop_error_bt_takephoto"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
         android:text="-" />
 
     <Button
         android:id="@+id/pop_error_bt_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/pop_error_bt_deletephoto"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/linearLayout7"
         android:text="保存" />
 
@@ -63,15 +51,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/pop_error_bt_takephoto"
+
         android:layout_alignStart="@+id/pop_error_tx"
         android:layout_below="@+id/pop_error_tx"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="29dp"
+
+        android:layout_marginRight="10dp"
         android:layout_toStartOf="@+id/pop_error_iv_photo"
         android:background="@drawable/rectangle_et_check"
         android:gravity="start"
-        android:paddingLeft="5dp"
         android:inputType="textNoSuggestions|textMultiLine"
+        android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:text="xxxxxxxxx" />
 
@@ -85,47 +74,52 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp">
+            android:orientation="horizontal">
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/pop_error_tx_factory"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:paddingBottom="16dp"
-                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
 
-                android:paddingTop="24dp"
-                android:text="工厂" />
+                android:text="工厂"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/pop_error_sp_factory"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:background="@drawable/stroke_spiner"
-                android:visibility="gone"
+                android:visibility="gone"></TextView>
 
-                ></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/pop_error_tx_section"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:paddingBottom="16dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="24dp"
-                android:text="工段" />
+                android:paddingTop="16dp"
+                android:text="工段"
+                android:visibility="gone" />
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/pop_error_sp_section"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/stroke_spiner"
+                android:visibility="gone"
 
                 ></TextView>
         </LinearLayout>
@@ -133,66 +127,75 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
-            android:weightSum="1">
+            android:orientation="horizontal">
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/pop_error_tx_workshop"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
                 android:paddingBottom="16dp"
-                android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:paddingTop="24dp"
-                android:text="车间" />
+                android:paddingTop="16dp"
+                android:text="车间"
+                android:visibility="gone" />
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/pop_error_sp_workshop"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/stroke_spiner"></TextView>
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/stroke_spiner"
+                android:visibility="gone"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/pop_error_tx_class"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:paddingBottom="16dp"
-                android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="24dp"
-                android:text="班组" />
+                android:text="班组"
+                android:visibility="gone" />
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/pop_error_sp_class"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/stroke_spiner"
+                android:visibility="gone"
 
                 ></TextView>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
-            android:weightSum="1">
+
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/pop_error_tx_user"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:paddingBottom="16dp"
-                android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="24dp"
+
                 android:text="负责人" />
 
             <TextView
@@ -200,6 +203,20 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/stroke_spiner"></TextView>
+
         </LinearLayout>
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/pop_error_bt_takephoto"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/pop_error_iv_photo"
+        android:layout_toStartOf="@+id/pop_error_bt_deletephoto"
+        android:layout_weight="0.09"
+        android:text="+" />
+
+
 </RelativeLayout>

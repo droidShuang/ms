@@ -12,8 +12,9 @@
 
         android:gravity="center"
         android:id="@+id/linearLayout9"
-        android:layout_marginBottom="105dp"
-        android:layout_above="@+id/imageView"
+
+        android:layout_marginBottom="93dp"
+        android:layout_above="@+id/login_edt_userid"
         android:layout_alignParentStart="true">
 
         <ImageView
@@ -29,16 +30,6 @@
             android:background="@mipmap/defoult_lvse_logo" />
     </LinearLayout>
 
-    <ImageView
-        android:visibility="invisible"
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:background="@mipmap/defoult_man_icon"
-        android:layout_marginStart="15dp"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/login_sp_factory" />
 
     <EditText
         android:drawableLeft="@mipmap/defoult_man_icon"
@@ -48,20 +39,12 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/edittext_rectangle"
         android:paddingLeft="10dp"
+        android:drawablePadding="8dp"
         android:paddingRight="10dp"
         android:textColor="@color/white"
-        android:layout_alignBottom="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView" />
+        android:layout_above="@+id/login_edt_psw"
+        android:layout_centerHorizontal="true" />
 
-    <ImageView
-        android:visibility="invisible"
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:background="@mipmap/defoult_key_icon"
-        android:layout_below="@+id/imageView"
-        android:layout_alignStart="@+id/imageView" />
 
     <EditText
         android:drawableLeft="@mipmap/defoult_key_icon"
@@ -70,46 +53,41 @@
         android:layout_height="@dimen/activity_login_et_height"
         android:background="@drawable/edittext_rectangle"
         android:ems="10"
+        android:drawablePadding="8dp"
+
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:textColor="@color/white"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_alignEnd="@+id/login_edt_userid"
-        android:layout_toEndOf="@+id/imageView" />
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/login_sp_choose"
+        android:layout_alignStart="@+id/login_edt_userid"
+        android:layout_alignEnd="@+id/login_edt_userid" />
 
     <Button
         android:id="@+id/login_bt_login"
 
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:text="@string/login"
-        android:textColor="@color/md_blue_900"
-        android:textSize="20sp"
-        android:layout_marginTop="38dp"
-        android:layout_below="@+id/login_sp_choose"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:id="@+id/login_sp_factory"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/stroke_spiner"
-        android:gravity="center"
-        android:onClick="onClick"
-        android:text="选择工厂"
-        android:visibility="gone"
-        android:layout_below="@+id/login_edt_psw"
-        android:layout_centerHorizontal="true" />
+        android:text="@string/login"
+        android:textColor="@color/md_white_1000"
+        android:textSize="16sp"
+        android:background="@drawable/bt_bg"
+        android:layout_marginBottom="84dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/login_sp_choose"
+        android:layout_alignEnd="@+id/login_sp_choose" />
+
+
     <Spinner
 
         android:id="@+id/login_sp_choose"
         android:entries="@array/factoryList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/login_edt_psw"
-        android:layout_alignEnd="@+id/login_edt_psw"
-        android:layout_alignStart="@+id/login_edt_psw"></Spinner>
+
+        android:layout_above="@+id/login_bt_login"
+        android:layout_marginBottom="60dp"
+        android:layout_alignStart="@+id/login_edt_psw"
+        android:layout_alignEnd="@+id/login_edt_psw"></Spinner>
 </RelativeLayout>

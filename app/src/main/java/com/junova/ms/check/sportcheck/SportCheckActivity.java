@@ -46,8 +46,7 @@ public class SportCheckActivity extends BaseActivity implements SportCheckContra
     SportCheckContract.presenter presenter;
     List<MissionItem> missionItemList;
     List<MissionTable> missionTableList;
-    @Bind(R.id.sportcheck_rv_mission)
-    RecyclerView rvMission;
+
     boolean isDetail = false;
     String missionTableId;
     String moudleId = "";
@@ -55,6 +54,8 @@ public class SportCheckActivity extends BaseActivity implements SportCheckContra
     String partId = "";
     String partLevel = "";
     String partName = "";
+    @Bind(R.id.sportcheck_rv_mission)
+    RecyclerView rvMission;
     @Bind(R.id.sportcheck_sp_class)
     TextView spClass;
     @Bind(R.id.sportcheck_sp_model)
@@ -201,7 +202,7 @@ public class SportCheckActivity extends BaseActivity implements SportCheckContra
     public void onPartSpinnerClicked(TextView tx) {
         switch (tx.getId()) {
             case R.id.sportcheck_sp_factory:
-                presenter.getPart("D75026547F31445A9C97DEB411E7322D", tx);
+                presenter.getPart(PrefUtils.getString(SportCheckActivity.this, "factoryId", ""), tx);
                 break;
             case R.id.sportcheck_sp_workshop:
                 if (factoryId.isEmpty()) {
@@ -264,7 +265,7 @@ public class SportCheckActivity extends BaseActivity implements SportCheckContra
     @Override
     public void showModel(List<Module> moduleList, final TextView tx) {
         final ModulePopWindow modulePopWindow = new ModulePopWindow(this, moduleList);
-        modulePopWindow.setWidth(200);
+        modulePopWindow.setWidth(tx.getWidth());
         modulePopWindow.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
         modulePopWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
@@ -290,9 +291,10 @@ public class SportCheckActivity extends BaseActivity implements SportCheckContra
     public void showPart(List<Part> partList, final TextView tx) {
         if (partList.isEmpty()) {
             Toasty.info(SportCheckActivity.this, "数据为空").show();
+            return;
         }
         final PartPopWindow partPopWindow = new PartPopWindow(this, partList);
-        partPopWindow.setWidth(200);
+        partPopWindow.setWidth(tx.getWidth());
         partPopWindow.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
         partPopWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override

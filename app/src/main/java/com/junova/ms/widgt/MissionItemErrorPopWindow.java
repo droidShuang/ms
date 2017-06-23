@@ -249,7 +249,7 @@ public class MissionItemErrorPopWindow extends PopupWindow {
         }
         status = 1;
         Record record = new Record();
-        record.setTime(DateUtil.getTimestamp());
+        record.setCheckTime(DateUtil.getTimestamp());
         record.setValue("");
         record.setStatus(1);
         record.setMissionItemId(missionDetailId);

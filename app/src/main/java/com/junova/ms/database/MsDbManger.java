@@ -194,6 +194,7 @@ public class MsDbManger {
 
     public List<Record> selectRecordsByStatus(String status) {
         db = dbHelper.getReadableDatabase();
+
         Cursor cursor = db.rawQuery("select * from " + AppConfig.RECORD + " where " + TableColumns.RecordTable.Record_Status + "!= ?", new String[]{status});
         List<Record> recordList = new ArrayList<>();
         while (cursor != null && cursor.moveToNext()) {
@@ -207,7 +208,9 @@ public class MsDbManger {
                     CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_Time),
                     CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_Value),
                     CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_IS_Up),
-                    CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_Id));
+                    CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_Id),
+                    CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_To_User_Id),
+                    CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_TO_User_Name));
             recordList.add(record);
         }
         cursor.close();
@@ -262,7 +265,9 @@ public class MsDbManger {
                     CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_Time),
                     CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_Value),
                     CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_IS_Up),
-                    CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_Id));
+                    CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_Id),
+                    CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_To_User_Id),
+                    CursorUtil.getStringOfColumn(cursor, TableColumns.RecordTable.Record_TO_User_Name));
             recordList.add(record);
         }
         cursor.close();
@@ -559,7 +564,7 @@ public class MsDbManger {
             contentValues.put(TableColumns.RecordTable.Record_Error_Image, record.getErrorImage());
             contentValues.put(TableColumns.RecordTable.Record_Status, record.getStatus());
             contentValues.put(TableColumns.RecordTable.Record_Table_Id, record.getMissionTableId());
-            contentValues.put(TableColumns.RecordTable.Record_Time, record.getTime());
+            contentValues.put(TableColumns.RecordTable.Record_Time, record.getCheckTime());
             contentValues.put(TableColumns.RecordTable.Record_Value, record.getValue());
             contentValues.put(TableColumns.MissionTable.Mission_ISUP, "1");
             db.insert(AppConfig.RECORD, null, contentValues);
@@ -619,7 +624,7 @@ public class MsDbManger {
         contentValues.put(TableColumns.RecordTable.Record_Error_Image, record.getErrorImage());
         contentValues.put(TableColumns.RecordTable.Record_Status, record.getStatus());
         contentValues.put(TableColumns.RecordTable.Record_Table_Id, record.getMissionTableId());
-        contentValues.put(TableColumns.RecordTable.Record_Time, record.getTime());
+        contentValues.put(TableColumns.RecordTable.Record_Time, record.getCheckTime());
         contentValues.put(TableColumns.RecordTable.Record_Value, record.getValue());
         contentValues.put(TableColumns.RecordTable.Record_IS_Up, "1");
         db.insert(AppConfig.RECORD, null, contentValues);
@@ -635,16 +640,16 @@ public class MsDbManger {
         contentValues.put(TableColumns.RecordTable.Record_Error_Image, record.getErrorImage());
         contentValues.put(TableColumns.RecordTable.Record_Status, record.getStatus());
         contentValues.put(TableColumns.RecordTable.Record_Table_Id, record.getMissionTableId());
-        contentValues.put(TableColumns.RecordTable.Record_Time, record.getTime());
+        contentValues.put(TableColumns.RecordTable.Record_Time, record.getCheckTime());
         contentValues.put(TableColumns.RecordTable.Record_Value, record.getValue());
         contentValues.put(TableColumns.RecordTable.Record_Factory_Id, record.getMissionTableId());
-        contentValues.put(TableColumns.RecordTable.Record_Factory_Name, record.getTime());
+        contentValues.put(TableColumns.RecordTable.Record_Factory_Name, record.getCheckTime());
         contentValues.put(TableColumns.RecordTable.Record_Section_Id, record.getValue());
         contentValues.put(TableColumns.RecordTable.Record_Section_Name, record.getMissionTableId());
-        contentValues.put(TableColumns.RecordTable.Record_Shop_Id, record.getTime());
+        contentValues.put(TableColumns.RecordTable.Record_Shop_Id, record.getCheckTime());
         contentValues.put(TableColumns.RecordTable.Record_Shop_Name, record.getValue());
         contentValues.put(TableColumns.RecordTable.Record_Class_Id, record.getMissionTableId());
-        contentValues.put(TableColumns.RecordTable.Record_Class_Name, record.getTime());
+        contentValues.put(TableColumns.RecordTable.Record_Class_Name, record.getCheckTime());
         contentValues.put(TableColumns.RecordTable.Record_Part_Id, record.getValue());
         db.insert(AppConfig.RECORD, null, contentValues);
         closeDB();
@@ -657,16 +662,16 @@ public class MsDbManger {
         contentValues.put(TableColumns.RecordTable.Record_Error_Id, record.getErrorId());
         contentValues.put(TableColumns.RecordTable.Record_Error_Image, record.getErrorImage());
         contentValues.put(TableColumns.RecordTable.Record_Status, record.getStatus());
-        contentValues.put(TableColumns.RecordTable.Record_Time, record.getTime());
+        contentValues.put(TableColumns.RecordTable.Record_Time, record.getCheckTime());
         contentValues.put(TableColumns.RecordTable.Record_Value, record.getValue());
         contentValues.put(TableColumns.RecordTable.Record_Factory_Id, record.getMissionTableId());
-        contentValues.put(TableColumns.RecordTable.Record_Factory_Name, record.getTime());
+        contentValues.put(TableColumns.RecordTable.Record_Factory_Name, record.getCheckTime());
         contentValues.put(TableColumns.RecordTable.Record_Section_Id, record.getValue());
         contentValues.put(TableColumns.RecordTable.Record_Section_Name, record.getMissionTableId());
-        contentValues.put(TableColumns.RecordTable.Record_Shop_Id, record.getTime());
+        contentValues.put(TableColumns.RecordTable.Record_Shop_Id, record.getCheckTime());
         contentValues.put(TableColumns.RecordTable.Record_Shop_Name, record.getValue());
         contentValues.put(TableColumns.RecordTable.Record_Class_Id, record.getMissionTableId());
-        contentValues.put(TableColumns.RecordTable.Record_Class_Name, record.getTime());
+        contentValues.put(TableColumns.RecordTable.Record_Class_Name, record.getCheckTime());
         contentValues.put(TableColumns.RecordTable.Record_Part_Id, record.getValue());
         db.update(AppConfig.RECORD, contentValues, TableColumns.RecordTable.Record_Detail_Id + " = ?", new String[]{missionDetailId});
     }
@@ -683,6 +688,13 @@ public class MsDbManger {
         closeDB();
     }
 
+    public void deleteAllSportRecord() {
+        db = dbHelper.getWritableDatabase();
+        db.execSQL("delete from " + AppConfig.RECORD);
+        db.execSQL("delete from " + AppConfig.MissionDetailTable);
+        db.close();
+    }
+
     public void updataRecord(String missionTableId, String status) {
         db = dbHelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -695,6 +707,14 @@ public class MsDbManger {
         closeDB();
     }
 
+    public void deleteSportRecord(String missionTableId) {
+        db = dbHelper.getWritableDatabase();
+        db.delete(AppConfig.RECORD, TableColumns.RecordTable.Record_Table_Id + " = ?", new String[]{missionTableId});
+        db.delete(AppConfig.MissionDetailTable, TableColumns.MissionDetailTable.Detail_Parent_Id + "=?", new String[]{missionTableId});
+        db.close();
+    }
+
+
     public void updataRecord(String missionDetailId, Record record) {
         db = dbHelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -702,7 +722,7 @@ public class MsDbManger {
         contentValues.put(TableColumns.RecordTable.Record_Error_Id, record.getErrorId());
         contentValues.put(TableColumns.RecordTable.Record_Error_Image, record.getErrorImage());
         contentValues.put(TableColumns.RecordTable.Record_Status, record.getStatus());
-        contentValues.put(TableColumns.RecordTable.Record_Time, record.getTime());
+        contentValues.put(TableColumns.RecordTable.Record_Time, record.getCheckTime());
         contentValues.put(TableColumns.RecordTable.Record_Value, record.getValue());
 
         contentValues.put(TableColumns.RecordTable.Record_Factory_Name, record.getFactoryName());

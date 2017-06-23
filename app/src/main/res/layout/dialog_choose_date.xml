@@ -1,41 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout12"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-
-    android:id="@+id/starttime"
-    android:paddingLeft="100dp"
-    android:layout_alignParentTop="true"
-    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="开始时间"/>
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
     <TextView
-        android:paddingRight="100dp"
+        android:id="@+id/starttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
+        android:gravity="center"
+
+
+        android:text="开始时间" />
+
+    <DatePicker
+        android:id="@+id/dialog_choosedate_dpstart"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="114dp"
+        android:calendarViewShown="false"
+
+        android:datePickerMode="spinner" />
+
+    <TextView
         android:id="@+id/endtime"
-        android:text="结束时间"/>
-
-    <DatePicker
-        android:layout_below="@+id/starttime"
-        android:calendarViewShown="false"
-        android:datePickerMode="spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:id="@+id/dialog_choosedate_dpstart" />
-    <DatePicker
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/endtime"
-        android:calendarViewShown="false"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="结束时间" />
+
+    <DatePicker
+        android:id="@+id/dialog_choosedate_dpend"
         android:layout_width="wrap_content"
-        android:datePickerMode="spinner"
+        android:layout_height="114dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+</LinearLayout>
 
-        android:layout_height="wrap_content"
-        android:id="@+id/dialog_choosedate_dpend" />
 
-</RelativeLayout>
+

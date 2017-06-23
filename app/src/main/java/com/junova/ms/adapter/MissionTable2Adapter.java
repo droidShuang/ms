@@ -99,7 +99,7 @@ public class MissionTable2Adapter extends RecyclerView.Adapter<MissionTable2Adap
 
         void onBind(int position) {
             MissionTable missionTable = missionTables.get(position);
-       //     txDate.setText(missionTable.getTime());
+       //     txDate.setText(missionTable.getCheckTime());
             txTitle.setText(missionTable.getTitle());
         }
     }

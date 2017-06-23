@@ -15,4 +15,8 @@
     <dimen name="home_article_title_txsize">18sp</dimen>
     <dimen name="home_article_summary_txsize">15sp</dimen>
     <dimen name="home_article_date_txsize">13sp</dimen>
+    <dimen name="normal_button_width">80dp</dimen>
+    <dimen name="normal_button_height">60dp</dimen>
+    <dimen name="iv_width">200dp</dimen>
+    <dimen name="iv_height">200dp</dimen>
 </resources>
