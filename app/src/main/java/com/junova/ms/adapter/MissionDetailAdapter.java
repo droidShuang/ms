@@ -158,6 +158,10 @@ public class MissionDetailAdapter extends RecyclerView.Adapter<RecyclerView.View
                     builder.setPositiveButton("确认", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
+                            if (edVaue.getText().toString().isEmpty()) {
+                                Toasty.info(v.getContext(), "请输入数值").show();
+                                return;
+                            }
                             int value = Integer.parseInt(edVaue.getText().toString());
 
                             int currentStatus = 0;

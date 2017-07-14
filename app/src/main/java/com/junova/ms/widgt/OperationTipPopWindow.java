@@ -53,6 +53,10 @@ public class OperationTipPopWindow extends PopupWindow {
         if (!urls.isEmpty()) {
             Glide.with(context).load(AppConfig.IMAGEPATH + urls.get(0)).into(ivTip);
         }
+        for (int i = 0; i < urls.size(); i++) {
+            String url = AppConfig.IMAGEPATH + urls.get(i);
+            urls.set(i, url);
+        }
 
         txTip.setText(strTip);
     }

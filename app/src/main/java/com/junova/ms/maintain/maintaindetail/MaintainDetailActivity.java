@@ -416,6 +416,9 @@ public class MaintainDetailActivity extends BaseActivity implements MaintainDeta
                 etOperation.append(spanString);
                 etOperation.setSelection(1);
                 for (int j = 0; j < record.getOperateImage().size(); j++) {
+                    if (record.getOperateImage().get(j).isEmpty()) {
+                        continue;
+                    }
                     operationList.add(tmpString);
                     imagePath.add(AppConfig.IMAGEPATH + record.getOperateImage().get(j));
 

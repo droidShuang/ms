@@ -448,7 +448,7 @@ public class StatisticsActivity extends BaseActivity implements StatisticsContra
     @Override
     public void showPart(List<Part> partList, final TextView tx) {
         final PartPopWindow partPopWindow = new PartPopWindow(this, partList);
-        partPopWindow.setWidth(200);
+        partPopWindow.setWidth(tx.getWidth());
         partPopWindow.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
         partPopWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override

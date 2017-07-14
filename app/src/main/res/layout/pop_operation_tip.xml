@@ -13,7 +13,7 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:paddingTop="24dp"
-        android:text="操作规范："
+        android:text="操作提示："
         android:textColor="@color/black"
         android:textSize="24sp" />
 

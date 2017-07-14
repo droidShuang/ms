@@ -24,83 +24,77 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             android:weightSum="4">
 
             <TextView
-
                 android:id="@+id/sportcheck_tx_model"
-                android:layout_width="100dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
 
-                android:paddingBottom="16dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="24dp"
                 android:text="管理模块" />
 
             <TextView
                 android:id="@+id/sportcheck_sp_model"
-                android:layout_width="150dp"
+                android:layout_width="0dp"
                 android:layout_height="44dp"
+                android:layout_weight="1"
                 android:background="@drawable/stroke_spiner"></TextView>
 
             <TextView
                 android:id="@+id/sportcheck_tx_factory"
-                android:layout_width="100dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
 
-                android:paddingBottom="16dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="24dp"
+
                 android:text="工厂" />
 
             <TextView
                 android:id="@+id/sportcheck_sp_factory"
-                android:layout_width="150dp"
+                android:layout_width="0dp"
                 android:layout_height="44dp"
+                android:layout_weight="1"
                 android:background="@drawable/stroke_spiner"></TextView>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="4">
 
             <TextView
                 android:id="@+id/sportcheck_tx_workshop"
-                android:layout_width="100dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-
-                android:paddingBottom="16dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="24dp"
                 android:text="车间" />
 
             <TextView
 
                 android:id="@+id/sportcheck_sp_workshop"
-                android:layout_width="150dp"
-                android:layout_height="44dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:background="@drawable/stroke_spiner"></TextView>
 
             <TextView
                 android:id="@+id/sportcheck_tx_section"
-                android:layout_width="100dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
 
-                android:paddingBottom="16dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="24dp"
+
                 android:text="工段" />
 
             <TextView
                 android:id="@+id/sportcheck_sp_section"
-                android:layout_width="150dp"
-                android:layout_height="44dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:background="@drawable/stroke_spiner">
 
             </TextView>
@@ -114,18 +108,17 @@
 
             <TextView
                 android:id="@+id/sportcheck_tx_class"
-                android:layout_width="100dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:paddingBottom="16dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="24dp"
+
                 android:text="班组" />
 
             <TextView
                 android:id="@+id/sportcheck_sp_class"
-                android:layout_width="150dp"
-                android:layout_height="44dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:background="@drawable/stroke_spiner"></TextView>
 
 
